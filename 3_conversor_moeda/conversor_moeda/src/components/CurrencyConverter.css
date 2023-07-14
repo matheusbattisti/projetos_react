@@ -1,0 +1,59 @@
+.converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.converter h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.converter .input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.converter .input-section input,
+.converter .input-section select {
+  width: 200px;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+}
+
+.converter .input-section button {
+  width: 200px;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: #4facfe;
+  cursor: pointer;
+}
+
+.converter .input-section button:hover {
+  background-color: #00f2fe;
+  color: white;
+}
+
+.converter h3 {
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.converter p {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
