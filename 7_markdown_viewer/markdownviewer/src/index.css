@@ -1,0 +1,32 @@
+/* Estilos para o App */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: 50px auto;
+}
+
+/* Estilos para a barra de ferramentas */
+.toolbar {
+  margin-bottom: 20px;
+}
+
+.toolbar button {
+  margin-right: 5px;
+  padding: 10px 20px;
+}
+
+/* Estilos para a área de texto e visualização */
+textarea {
+  width: 100%;
+  height: 300px;
+}
+
+div[dangerouslySetInnerHTML] {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+}

@@ -1,0 +1,73 @@
+/* Estilos globais para centralizar todo o conteúdo */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+/* Estilo para o contêiner principal do jogo */
+.game-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o tabuleiro */
+.board {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 5px;
+}
+
+/* Estilo para cada quadrado */
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Estilo para o vencedor */
+.winner {
+  background-color: #ffcc00;
+}
+
+/* Estilo para o status do jogo */
+.status {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Estilo para o botão de reiniciar */
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo para o botão de reiniciar no hover */
+.reset-button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,36 @@
+/* Estilos globais para a aplicação */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Container principal */
+div {
+  text-align: center;
+}
+
+/* Cabeçalho */
+h1 {
+  background-color: #6200ea;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Dropdown de fusos horários */
+select {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+/* Relógios individuais */
+.TimeZoneClock {
+  display: inline-block;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
