@@ -1,0 +1,82 @@
+* {
+  font-family: Helvetica;
+}
+
+/* Estilos para o carrossel */
+h1 {
+  text-align: center;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Estilos para cada slide */
+.slide {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transition: opacity 1s;
+}
+
+/* Estilo para o slide ativo */
+.slide.active {
+  opacity: 1;
+  position: relative;
+  transition: opacity 1s;
+}
+
+/* Imagens dentro dos slides */
+.slide img {
+  width: 100%;
+}
+
+/* Estilos para os indicadores */
+.indicators {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* Estilo de cada indicador */
+.indicator {
+  width: 10px;
+  height: 10px;
+  background: #6e6b6b;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background 0.3s;
+}
+
+/* Estilo para o indicador ativo */
+.indicator.active {
+  background: #fff;
+}
+
+/* Estilos para os botões */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
