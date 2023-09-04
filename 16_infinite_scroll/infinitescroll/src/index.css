@@ -1,0 +1,36 @@
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para o componente InfiniteScroll */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+li {
+  border: 1px solid #ccc;
+  margin: 8px 0;
+  padding: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+/* Estilo para a mensagem de carregamento */
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}

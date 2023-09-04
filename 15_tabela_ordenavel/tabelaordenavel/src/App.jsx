@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import SearchBar from "./components/SearchBar";
+import TableHeader from "./components/TableHeader";
+import TableRow from "./components/TableRow";
 
-function App() {
-  const [count, setCount] = useState(0)
+const TableSortable = () => {
+  const [data, setData] = useState([
+    { nome: "Ana", idade: 25, cargo: "Engenheira" },
+    { nome: "João", idade: 30, cargo: "Desenvolvedor" },
+    { nome: "Maria", idade: 22, cargo: "Designer" },
+    { nome: "Carlos", idade: 40, cargo: "Gerente" },
+    { nome: "Sofia", idade: 28, cargo: "Analista" },
+    // ... outros registros
+  ]);
+
+  const [sortConfig, setSortConfig] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const sortedData = [...data].sort((a, b) => {
+    if (sortConfig !== null) {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? -1 : 1;
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1;
+      }
+    }
+    return 0;
+  });
+
+  const filteredData = sortedData.filter(
+    (row) =>
+      row.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.cargo.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const onColumnClick = (key) => {
+    let direction = "ascending";
+
+    if (
+      sortConfig &&
+      sortConfig.key === key &&
+      sortConfig.direction === "ascending"
+    ) {
+      direction = "descending";
+    }
+
+    setSortConfig({ key, direction });
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="container">
+      <h1>Tabela de usuários</h1>
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <table>
+        <TableHeader onColumnClick={onColumnClick} />
+        <tbody>
+          {filteredData.map((row, index) => (
+            <TableRow key={index} row={row} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
-export default App
+export default TableSortable;
