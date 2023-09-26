@@ -42,6 +42,7 @@ const CurrencyConverter = () => {
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
       />
+      <span>Selecione as moedas:</span>
       <select
         value={fromCurrency}
         onChange={(e) => setFromCurrency(e.target.value)}
