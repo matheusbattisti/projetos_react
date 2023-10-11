@@ -5,50 +5,40 @@
   padding: 2rem;
   border-radius: 10px;
   width: 400px;
+  margin: 2rem auto;
   background-color: #f8f9fa;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
 }
 
 .converter h2 {
   color: #343a40;
   font-size: 1.8rem;
   margin-bottom: 2rem;
-  font-weight: bold;
 }
 
 .converter input,
 .converter select {
   width: 100%;
   padding: 0.7rem 1rem;
-  margin: 0.3rem 0;
-  border: 1px solid #ced4da;
+  box-sizing: border-box;
   border-radius: 4px;
   font-size: 1rem;
   color: #495057;
-  background-color: #ffffff;
-  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ced4da;
 }
 
 .converter input {
   margin-bottom: 30px;
 }
 
-.converter span {
+.converter span,
+.converter p {
   margin: 0.5rem;
   font-size: 1rem;
   color: #495057;
 }
 
-.converter h3 {
-  font-size: 1.6rem;
-  color: #343a40;
-  margin-top: 1rem;
-}
-
 .converter p {
   font-size: 1.2rem;
-  color: #495057;
-  margin-top: 0.5rem;
-  text-align: center;
 }

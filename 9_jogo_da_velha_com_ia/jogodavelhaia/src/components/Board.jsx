@@ -38,7 +38,7 @@ const Board = () => {
       <div className="status">
         Status:{" "}
         {winner ? (
-          <p className="winner">O vencedor é: ${winner}!</p>
+          <p className="winner">O vencedor é: {winner}!</p>
         ) : (
           `Próximo a jogar: ${xIsNext ? "X" : "O"}`
         )}

@@ -35,8 +35,10 @@ const App = () => {
         `https://api.openweathermap.org/data/2.5/forecast?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`
       );
 
+      respostaClima.data.main.temp = (respostaClima.data.main.temp - 32) * (5 / 9);
+
       setClima(respostaClima.data);
-      setPrevisao(respostaPrevisao.data.list.slice(0, 5)); // Obter as 5 primeiras previsões (de 3 em 3 horas)
+      setPrevisao(respostaPrevisao.data.list.slice(0, 5)); // Obter as 5 primeiras previsões
     } catch (error) {
       console.error("Erro ao buscar dados do clima:", error);
     }

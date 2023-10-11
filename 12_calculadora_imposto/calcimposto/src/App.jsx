@@ -26,6 +26,8 @@ const App = () => {
     setTaxData(taxData);
   };
 
+  console.log(taxData);
+
   return (
     <Container style={{ maxWidth: "800px", margin: "0 auto" }}>
       <Typography variant="h3" align="center" style={{ marginBottom: "16px" }}>

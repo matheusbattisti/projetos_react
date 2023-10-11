@@ -27,7 +27,7 @@ const TaxForm = ({ onSubmit }) => {
       return errors;
     },
     onSubmit: (values) => {
-      console.log(values);
+      onSubmit(values);
     },
   });
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Citacao from "./components/Citacao";
-import citacoes from "./data"; // assumindo que você tem um arquivo de dados com as citações
+import citacoes from "./data";
 
 function App() {
   const [indice, setIndice] = useState(0);
