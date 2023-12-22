@@ -12,7 +12,7 @@ const CurrencyConverter = () => {
   useEffect(() => {
     axios
       .get(
-        "https://v6.exchangerate-api.com/v6/33332548d2112393d3992002/latest/USD"
+        "https://v6.exchangerate-api.com/v6/348f1a00d0d92278c12411af/latest/USD"
       )
       .then((response) => {
         setRates(response.data.conversion_rates);
