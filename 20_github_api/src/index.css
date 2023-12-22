@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #0e1129;
+  padding: 2rem;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
